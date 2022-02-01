@@ -1,0 +1,33 @@
+Pour calculer les nouvelles coordonnées des points du dessin lors d'une transformation,
+ on utilie les anciennes coord. Dans le cas de l'agrandissement, des rotations et de nomreuses autres transfo
+ (sauf les translations ) les nouvelles coord se calculent à l'aide d'une formule du type
+
+ x' = ax +by
+ y' = cx + dy
+
+ avec a, bc et d des réels
+
+ exemple agrandissement d'une fonction f
+ x' = fx
+ y' = fy
+ autrement dit a = f b=0 et, c = 0  d= f
+
+ rotation d'un angle
+  x' = cos(theta)x * sin(theta)y
+  y' = -sin(theta)x * cos(theta)y
+
+ autrement dit : a= cos(theta); b = sin(theta), c = sin(theta) et d = cos(theta)
+
+ on rassemble les 4 coef a,b,c et d dans un tableau que l'on appelle une matrice, notée:
+      a b
+ M= (      )
+      c d
+                                          f 0
+Exemple : matrice d'agrandissement Af : (     )
+                                          0 f
+
+                            cos(theta)      sin(theta)
+- matrice de rotation R0 = (                            )
+                            -sin(theta)     cos(theta)
+
+On apelle matrice à
